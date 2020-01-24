@@ -1,93 +1,16 @@
-# Install the virtual environment and start the application
+# Crime Scene Investigation (CSI) program
+This is a program that was created during my school period.
+The primary responsibility of crime scene investigators (CSIs) is to investigate crimes by carefully collecting and analyzing physical evidence. They may collect hair, tissue, and body fluids from a crime victim, or perform tests on items found at a crime scene. In short, they analyze all of the evidence in the interest of providing accurate information that may help to acquit or to convict a person of a crime
 
-Execute the following instructions in the folder where this README.md resides.
-
-# Instructions for Mac and Linux
-
-## Create the virtual environment
-
-`python3 -m venv venv`
-
-## Activate the virtual environment
-
-`. venv/bin/activate`
-voor mac:
-`source venv/bin/activate`
-voor linux:
-`. venv/bin/activate`
-
-## Install the requirements and the HFO module
-
-If there is no PIP on your system, install it using the instructions here:
-https://packaging.python.org/tutorials/installing-packages/
-
-`pip install -e .`
-
-Now run the HFO Flask application:
-
+## Usage
 ```
-export FLASK_APP=hf1
-export FLASK_ENV=development
-flask run
+The restriction_GUI_v2.py Python3.6.1 script is executed. This will activate the program and a Graphical User Interface (GUI) will show in front of the screen. To upload the input file (CSI_casus.fa), the file button is clicked . A few enzymes are selected to digest the DNA sequences. Finally, the digest button is clicked to perform the digestion
 ```
 
-## Available commands while starting Flask
-
-Create the database:
-`flask init-db`
-
-Recreate the database and fill with some demo data:
-`flask fill-db`
-
-# Instructions for Windows PowerShell
-
-## Create the virtual environment
-
-`python3 -m venv venv`
-
-## Activate the virtual environment
-
-`.\venv\Scripts\activate.bat`
-
-## Install the requirements and the HFO module
-
-If there is no PIP on your system, install it using the instructions here:
-https://packaging.python.org/tutorials/installing-packages/
-
-`pip install -e .`
-
-Now run the HFO Flask application:
-
+## Results
 ```
-$env:FLASK_APP="hf1"
-$env:FLASK_ENV="development"
-python -m flask run
+The GUI will now show multiple lines (which are also called bands) with the correspondent victims and perpetrator. In order to find the one person that is responsible for the crime, you need to follow the lines which matches the lines of the perpetrator.
 ```
 
-## Available commands while starting Flask
+The GUI shows multiple lines (which are also called bands) with the correspondent victims and perpetrator. In order to find the one person that is responsible for the crime, you need to follow the lines which matches the lines of the perpetrator. A video is created in order to show how this works. This can be found in the video directory.
 
-Create the database:
-`python -m flask init-db`
-
-Recreate the database and fill with some demo data:
-`python -m flask fill-db`
-
-## Rounding up
-
-The app can be configure using an config.cfg file in the instance directory.
-
-```python
-APP_VERSION='0.1poc'
-SECRET_KEY='my_secret'
-```
-
-## Instruction on how to use VS Code
-
-- Install Visual Studio Code https://code.visualstudio.com/Download
-- Install the pyhton extension: Python
-- Select the Python venv (bottom left task bar)
-- Select the debug icon (left task bar)
-- Select the debug settings (right to the green play button)
-- Select Python->Flask->hf1 and a the flask config is added
-
-VS Code can now debug your flask web application.
